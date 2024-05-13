@@ -1,11 +1,6 @@
 variable "github_repository" {
   type        = string
   description = "GitHub repository to store Flux manifests"
-
-  validation {
-    condition     = length(var.github_repository) > 0
-    error_message = "The github_repository must not be empty."
-  }
 }
 
 variable "flux_namespace" {
@@ -24,41 +19,35 @@ variable "github_token" {
   type        = string
   default     = ""
   description = "The token used to authenticate with the Git repository"
-
-  validation {
-    condition     = length(var.github_token) > 0
-    error_message = "The github_token must not be empty."
-  }
 }
 
 variable "private_key" {
   type        = string
-  default     = ""
+  default = ""
   description = "The private key used to authenticate with the Git repository"
 }
 
 variable "config_host" {
   type        = string
   default     = "gke"
-  description = "The url for gke"
+  description = "The url for kind"
 }
 
-variable "config_token" {
+variable "config_client_key" {
   type        = string
-  description = "The token for gke"
-
-  validation {
-    condition     = length(var.config_token) > 0
-    error_message = "The config_token must not be empty."
-  }
+  default     = "client_key"
+  description = "The token for kind"
 }
+
+variable "config_crt" {
+  type        = string
+  default     = "ca"
+  description = "The ca for kind"
+}
+
 
 variable "config_ca" {
   type        = string
   default     = "ca"
-  description = "The ca for gke"
-  validation {
-    condition     = length(var.config_ca) > 0
-    error_message = "The config_ca must not be empty."
-  }
+  description = "The ca for kind"
 }
