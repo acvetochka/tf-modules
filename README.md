@@ -1,6 +1,6 @@
 # tf-modules
 
-[GitHub Repository Terraform Module](github.com/acvetochka/tf-modules/tf-github-repository) - This Terraform module creates a private repository on GitHub, and adds a deploy key to it.
+[GitHub Repository Terraform Module](https://github.com/acvetochka/tf-modules/tf-github-repository) - This Terraform module creates a private repository on GitHub, and adds a deploy key to it.
 
 [TLS Private Key Terraform Module](https://github.com/acvetochka/tf-modules/tf-hashicorp-tls-keys) - This Terraform module generates a private key for Transport Layer Security (TLS). 
 
